@@ -1,0 +1,10 @@
+<div class="autocomplete-container">
+  <div class="autocomplete">
+    <input type="text" [formControl]="searchControl" placeholder="Type to search a city" class="input-field">
+    <ul class="autocomplete-list" *ngIf="shouldDisplayList()">
+      <li *ngFor="let city of cities" (click)="selectCity(city)" class="autocomplete-item">
+        {{ city }}
+      </li>
+    </ul>
+  </div>
+</div>
